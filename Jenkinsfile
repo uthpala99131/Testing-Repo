@@ -18,7 +18,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'testing-dockPass', variable: 'DockerPassword')]){
                     script {
-                        bat "docker login -u uthpala99 -p %testDocImg%"
+                        bat "docker login -u uthpala99 -p %DockerPassword%"
                     }
                 }
             }
