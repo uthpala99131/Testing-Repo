@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {  
-                bat 'docker build -t uthpala99/nodeapp-cuban:%BUILD_NUMBER% .'
+                bat 'docker build -t uthpala99/nextapp-cuban:%BUILD_NUMBER% .'
             }
         }
         stage('Login to Docker Hub') {
@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Push Image') {
             steps {
-                bat 'docker push uthpala99/nodeapp-cuban:%BUILD_NUMBER%'
+                bat 'docker push uthpala99/nextapp-cuban:%BUILD_NUMBER%'
             }
         }
     }
